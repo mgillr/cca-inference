@@ -74,6 +74,8 @@ This is historical evidence, not a current-release benchmark. The high-load resu
 
 ## Long-context results — unresolved attribution, not a headline win
 
+![Historical long-context comparison](charts/long-context-comparison.svg)
+
 The historical CCA-071 long-context experiment is retained with its own data and caveats in [results/long-context/](results/long-context/). The single-user long-prompt result recorded 51.4 tok/s with BF16 KV and 50.1 tok/s with 8-bit KV, against 29.1 tok/s for the vLLM FP8 arm. At the multi-user loads tested, both Tern-labelled variants were behind vLLM.
 
 There are two material limitations. First, the run note says Tern 1.3 but the raw JSON identifies the arm/profile/label as Tern 1.2. Second, the prefill budgets differed: 2,048 tokens per step for Tern and 8,192 for vLLM. I have not reconciled the version attribution or made this a controlled comparison. I keep it as historical descriptive evidence and exclude it from the Tern 1.3 headline.
