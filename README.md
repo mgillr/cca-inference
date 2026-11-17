@@ -2,11 +2,11 @@
 
 I am investigating ways to make GPU inference faster, more efficient and more accessible. The work spans the CCU memory wall, kernel execution and scheduling, and low-bit precision. This repository is a record of selected results I can currently share. It is not the implementation, and it is not a claim that the research is finished.
 
-**The position is straightforward:** I have found some promising results, published the evidence I can currently share, documented where the results fall short, and am looking for people who can help reproduce the work and push it further.
+I've found some promising results and put the measurements I can share in this repository. I've also included the runs that fell short and the problems I haven't resolved. I'd like to work with people who can reproduce the results, challenge the approach and help take the research further.
 
 ## Read this before interpreting the numbers
 
-The results below are measurements from specific campaigns and conditions. They should not be read as universal comparisons or as independently verified performance claims.
+The figures below come from specific experiments, with the conditions and gaps noted alongside them. They are not universal comparisons, and they have not been independently reproduced.
 
 - **CCA and Tern are different strands of work.** CCA-042 is an own-kernel research campaign. The fixed-concurrency table is a Tern 1.3 release comparison. I do not attribute one set of results to the other.
 - **The vLLM baseline changes.** In the fixed-concurrency Tern comparison, vLLM used GPTQ-Int8 + EAGLE-3 at 1 and 8 users, FP8 + draft at 24, and FP8 at 64 and 128. These are not comparisons against one fixed baseline.
@@ -14,7 +14,7 @@ The results below are measurements from specific campaigns and conditions. They 
 - **The quality readings are not yet independently interpretable.** The published values are campaign-recorded gate scores. I have not published the complete scoring definition, reference outputs, evaluation set, token counts and aggregation needed to interpret or reproduce them. I have also not published corresponding vLLM-side scores for the fixed-concurrency comparison. I therefore do not present these values as a common quality comparison.
 - **The evidence package is incomplete.** It contains selected aggregate CSV/JSON results and methodology notes, not the complete harness, raw per-request traces, environment manifests or all run artefacts. No result here has been independently replicated.
 
-I would rather make those limits clear than ask anyone to take the headline numbers on trust.
+Some of these results may not hold up under a more controlled test. That is part of what I want to find out.
 
 ## CCA-042 — own-kernel research campaign
 
