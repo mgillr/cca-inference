@@ -1,0 +1,5 @@
+arrival_rate_req_s,vllm_tok_s,tern_tok_s_min,tern_tok_s_max,tern_tpot_ms_min,tern_tpot_ms_max,vllm_tpot_ms,tern_ttft_s_min,tern_ttft_s_max,vllm_ttft_s,notes,provenance
+2.7,339.6,342.1,342.1,26.1,26.6,35.1,0.10,0.11,0.12,"Three rounds; no token mismatches reported; no quality-gate read","Historical CCA-071 report"
+6.2,783.4,786.7,786.7,43.7,44.4,37.5,0.11,0.11,0.13,"Three rounds; no token mismatches reported; no quality-gate read","Historical CCA-071 report"
+12.8,1644.0,1539.9,1623.6,76.0,81.0,47.7,1.51,7.05,0.17,"Three rounds; TTFT varied materially by round","Historical CCA-071 report"
+20.6,2396.8,1808.4,2135.3,0,0,0,16.0,37.6,0,"Three rounds; Tern throughput 0.75–0.88x vLLM; queue/in-flight grew 515 to 780; TPOT and vLLM TTFT omitted rather than inferred","Historical CCA-071 report"

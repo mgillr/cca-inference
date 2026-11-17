@@ -1,0 +1,6 @@
+users,tern_tok_s,vllm_tok_s,difference_percent,vllm_configuration,hardware_context,rounds,tern_quality_gate,provenance
+1,61.7,51.37,20.1,"GPTQ-Int8 + EAGLE-3","NVIDIA L4; separate session/card",3,"0.9757 stepwise / 0.9748 prefill","Measured — repository freeze"
+8,345.1,322.2,7.1,"GPTQ-Int8 + EAGLE-3","NVIDIA L4; separate session/card",3,"0.9839","Measured — repository freeze"
+24,830.8,698.4,19.0,"FP8 + draft","NVIDIA L4; separate session/card",3,"0.9826","Measured — repository freeze"
+64,1650.0,1597.7,3.3,"FP8","NVIDIA L4; separate session/card",3,"0.9800","Measured — repository freeze"
+128,2638.9,2642.6,-0.1,"FP8","NVIDIA L4; separate session/card",3,"0.9839","Measured — repository freeze"
